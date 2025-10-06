@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
+import Navbar from './Navbar';
+import Footer from './Footer';
 import { useState } from 'react';
 import axios from 'axios';
 import contact from '../assets/Contact.png';

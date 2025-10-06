@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { FaPlay } from "react-icons/fa";
 import { MdOutlineSearch, MdOutlineSecurity, MdChat, MdOutlineAnalytics, MdOutlineCheckCircle, MdOutlineRocketLaunch, MdOutlineCalendarMonth, MdOutlineCancel, MdOutlineGroup, MdOutlineUpload, MdOutlineSupportAgent, MdOutlineAutoFixHigh, MdOutlineCategory } from "react-icons/md";
 import { IoMdStats } from "react-icons/io";
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { useSubscriptionPlans } from "../context/SubscriptionPlansContext";
 
 export default function HomePage() {

@@ -1,132 +1,72 @@
-# RFP Management Application
+# RFP Application - AI-Powered Proposal Management Platform
 
-A comprehensive React-based Request for Proposal (RFP) management system with AI-powered solutions for streamlining proposal creation, compliance checking, and project management.
+A comprehensive web application designed to streamline the Request for Proposal (RFP) and Grant proposal process using AI-powered intelligence, smart templates, and comprehensive proposal management tools.
 
 ## 🚀 Features
 
-### Core Functionality
-- **AI-Powered Proposal Generation**: Automated RFP response creation with intelligent content generation
-- **Compliance Checking**: Basic and advanced compliance verification for proposals
-- **User Management**: Role-based access control (Company, Editor, Viewer, SuperAdmin)
-- **Profile Management**: Separate company and employee profile systems
-- **Dashboard**: Comprehensive project and proposal management interface
-- **Payment Integration**: Stripe-powered subscription and payment processing
+### Core Features
+- **AI RFP Discovery**: Find relevant RFPs matched to your business capabilities
+- **AI Grant Discovery**: Discover grant opportunities with AI-powered recommendations
+- **Smart Proposal Generation**: AI-powered proposal creation with dynamic templates
+- **Compliance Checking**: Automated compliance verification against RFP requirements
+- **Real-time Proposal Monitoring**: Monitor all your proposals in one centralized dashboard
+- **Team Collaboration**: Role-based access control for companies, editors, and viewers
+- **Calendar Integration**: Visual calendar view for proposal deadlines and events
+- **PDF Generation**: Export proposals and reports to PDF format
+- **Payment Integration**: Stripe-powered subscription management
+- **Support System**: Built-in ticket system for customer support
 
 ### User Roles
-- **Company**: Full access to all features, profile management, and team oversight
-- **Editor**: Proposal creation and editing capabilities
-- **Viewer**: Read-only access to proposals and compliance checks
+- **Company**: Full access to all features including team management
+- **Editor**: Can create and edit proposals, manage team members
+- **Viewer**: Read-only access to proposals and data
 - **SuperAdmin**: System administration and user management
 
-## 🏗️ Project Structure
-
-```
-src/
-├── components/           # Reusable UI components
-│   ├── admin/           # Admin-specific components
-│   │   ├── Card.jsx
-│   │   ├── PricingCard.jsx
-│   │   └── ShowCustomDetails.jsx
-│   ├── forms/           # Form components
-│   │   ├── GrantProposalForm.jsx
-│   │   └── PhoneNumberInput.jsx
-│   ├── layout/          # Layout components
-│   │   ├── Footer.jsx
-│   │   ├── Navbar.jsx
-│   │   └── NavbarComponent.jsx
-│   ├── ui/              # UI components
-│   │   ├── Generate_Word.jsx
-│   │   ├── PaymentButton.jsx
-│   │   ├── PaymentNavigation.jsx
-│   │   ├── Subscription.jsx
-│   │   └── ToastContainer.jsx
-│   └── ErrorBoundary.jsx
-├── config/              # Configuration files
-│   └── stripe.js
-├── context/             # React Context providers
-│   ├── EmployeeProfileContext.jsx
-│   ├── JWTVerifier.jsx
-│   ├── ProfileContext.jsx
-│   ├── SubscriptionPlansContext.jsx
-│   └── UserContext.jsx
-├── pages/               # Page components
-│   ├── admin/           # Admin pages
-│   │   └── SuperAdmin.jsx
-│   ├── auth/            # Authentication pages
-│   │   ├── ChangePassword.jsx
-│   │   ├── ForgotPassword.jsx
-│   │   ├── LoginPage.jsx
-│   │   ├── ProfileForm.jsx
-│   │   └── SignUpPage.jsx
-│   ├── dashboard/       # Dashboard pages
-│   │   ├── Dashboard.jsx
-│   │   └── Discover.jsx
-│   ├── profile/         # Profile management pages
-│   │   ├── CompanyProfileDashboard.jsx
-│   │   ├── CompanyProfileUpdate.jsx
-│   │   ├── EmployeeProfileDashboard.jsx
-│   │   └── EmployeeProfileUpdate.jsx
-│   ├── proposals/       # Proposal-related pages
-│   │   ├── AdvancedComplianceCheck.jsx
-│   │   ├── BasicComplianceCheck.jsx
-│   │   ├── Compliance.jsx
-│   │   ├── GenerateProposalPage.jsx
-│   │   └── Proposals.jsx
-│   ├── Contact.jsx
-│   ├── HomePage.jsx
-│   ├── ProtectedRoutes.jsx
-│   ├── StripePaymentPage.jsx
-│   └── SupportTicket.jsx
-├── utils/               # Utility functions
-│   ├── compression.js
-│   └── sanitization.js
-├── assets/              # Static assets
-└── App.jsx              # Main application component
-```
-
-## 🛠️ Technology Stack
+## 🛠️ Tech Stack
 
 ### Frontend
-- **React 18.3.1** - UI library
-- **Vite** - Build tool and development server
-- **React Router DOM 7.6.2** - Client-side routing
-- **Tailwind CSS 3.4.17** - Utility-first CSS framework
-- **React Hook Form 7.57.0** - Form management
-- **Axios 1.9.0** - HTTP client
+- **React 18** - Modern React with hooks and functional components
+- **Vite** - Fast build tool and development server
+- **React Router DOM** - Client-side routing with protected routes
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Hook Form** - Form handling and validation
+- **React Icons** - Comprehensive icon library
+- **Lucide React** - Modern icon components
+- **Axios** - HTTP client for API calls
 
-### UI Components & Icons
-- **Lucide React 0.525.0** - Icon library
-- **React Icons 5.5.0** - Additional icons
-- **React Select 5.10.1** - Select components
-- **React Toastify 11.0.5** - Toast notifications
-- **SweetAlert2 11.22.4** - Beautiful alerts
+### UI/UX Libraries
+- **React Toastify** - Toast notifications
+- **SweetAlert2** - Beautiful alert dialogs
+- **React Big Calendar** - Calendar component with moment.js
+- **React PDF** - PDF viewing capabilities
+- **React Phone Input 2** - International phone number input
 
-### Document & PDF Processing
-- **React PDF 7.0.0** - PDF rendering
-- **PDF-lib 1.17.1** - PDF manipulation
-- **HTML2PDF.js 0.10.3** - HTML to PDF conversion
-- **jsPDF 3.0.1** - PDF generation
-- **Quill 2.0.3** - Rich text editor
+### Payment & Communication
+- **Stripe** - Payment processing and subscription management
+- **EmailJS** - Email service integration
+- **JWT Decode** - Token management
 
-### Payment & Authentication
-- **Stripe React 3.9.2** - Payment processing
-- **JWT Decode 4.0.0** - JWT token handling
-- **LibPhoneNumber 1.12.9** - Phone number validation
+### Utilities
+- **Moment.js** - Date manipulation and formatting
+- **Pako** - Data compression utilities
+- **HTML2PDF.js** - PDF generation from HTML
+- **LibPhoneNumber** - Phone number validation
 
-### State Management & Utilities
-- **Redux Toolkit 2.8.2** - State management
-- **React Redux 9.2.0** - React-Redux bindings
-- **Moment.js 2.30.1** - Date manipulation
-- **UUID 11.1.0** - Unique identifier generation
-- **DOMPurify 3.2.7** - XSS protection
+### Development Tools
+- **ESLint** - Code linting and formatting
+- **PostCSS** - CSS processing
+- **Autoprefixer** - CSS vendor prefixing
+- **TypeScript Types** - Type definitions for React
 
-## 🚀 Getting Started
+## 📋 Prerequisites
 
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn package manager
+Before running this application, make sure you have the following installed:
 
-### Installation
+- **Node.js** (version 16 or higher)
+- **npm** package manager
+- **Git** for version control
+
+## 🚀 Installation
 
 1. **Clone the repository**
    ```bash
@@ -139,11 +79,10 @@ src/
    npm install
    ```
 
-3. **Environment Setup**
-   Create a `.env` file in the root directory with the following variables:
+3. **Set up environment variables**
+   Create a `.env` file in the root directory:
    ```env
-   VITE_API_BASE_URL=your_api_base_url
-   VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+   VITE_API_BASE_URL=https://proposal-form-backend.vercel.app/api
    ```
 
 4. **Start the development server**
@@ -151,141 +90,276 @@ src/
    npm run dev
    ```
 
-5. **Build for production**
-   ```bash
-   npm run build
-   ```
+5. **Open your browser**
+   Navigate to `http://localhost:5173` to view the application
 
-## 📱 Available Scripts
+## 📁 Project Structure
+
+```
+rfp-app-new/
+├── public/                     # Static assets and images
+│   ├── dashboard-bg.png
+│   ├── homepage.png
+│   ├── Login.png
+│   ├── Sign_Up.png
+│   └── ...                     # Other static assets
+├── src/
+│   ├── assets/                 # Static assets (logos, icons)
+│   │   ├── Contact.png
+│   │   └── superAdmin/         # Super admin specific assets
+│   ├── components/             # Reusable React components
+│   │   ├── admin/              # Admin-specific components
+│   │   ├── dashboard/          # Dashboard components
+│   │   ├── discover/           # Discovery page components
+│   │   ├── forms/              # Form components
+│   │   ├── layout/             # Layout components
+│   │   ├── payment/            # Payment-related components
+│   │   ├── profile/            # Profile management components
+│   │   ├── proposals/          # Proposal-related components
+│   │   ├── superadmin/         # Super admin components
+│   │   ├── support/            # Support system components
+│   │   ├── ui/                 # UI components
+│   │   ├── ErrorBoundary.jsx
+│   │   ├── GrantProposalForm.jsx
+│   │   ├── Generate_Word.jsx
+│   │   ├── PaymentButton.jsx
+│   │   ├── PaymentNavigation.jsx
+│   │   ├── PhoneNumberInput.jsx
+│   │   └── Subscription.jsx
+│   ├── config/                 # Configuration files
+│   │   └── stripe.js           # Stripe configuration
+│   ├── context/                # React Context providers
+│   │   ├── EmployeeProfileContext.jsx
+│   │   ├── JWTVerifier.jsx
+│   │   ├── ProfileContext.jsx
+│   │   ├── SubscriptionPlansContext.jsx
+│   │   └── UserContext.jsx
+│   ├── pages/                  # Main application pages
+│   │   ├── admin/              # Admin pages
+│   │   ├── auth/               # Authentication pages
+│   │   ├── dashboard/          # Dashboard pages
+│   │   ├── profile/            # Profile pages
+│   │   ├── proposals/          # Proposal pages
+│   │   ├── AdvancedComplianceCheck.jsx
+│   │   ├── BasicComplianceCheck.jsx
+│   │   ├── ChangePassword.jsx
+│   │   ├── CompanyProfileDashboard.jsx
+│   │   ├── CompanyProfileUpdate.jsx
+│   │   ├── Compliance.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Discover.jsx
+│   │   ├── EmployeeProfileDashboard.jsx
+│   │   ├── EmployeeProfileUpdate.jsx
+│   │   ├── Footer.jsx
+│   │   ├── ForgotPassword.jsx
+│   │   ├── GenerateProposalPage.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── LoginPage.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── NavbarComponent.jsx
+│   │   ├── ProfileForm.jsx
+│   │   ├── Proposals.jsx
+│   │   ├── ProtectedRoutes.jsx
+│   │   ├── SignUpPage.jsx
+│   │   ├── StripePaymentPage.jsx
+│   │   ├── SupportTicket.jsx
+│   │   └── ToastContainer.jsx
+│   ├── Super_Admin/            # Super admin functionality
+│   │   └── SuperAdmin.jsx
+│   ├── utils/                  # Utility functions
+│   │   ├── compression.js      # Data compression utilities
+│   │   └── sanitization.js     # Data sanitization utilities
+│   ├── App.jsx                 # Main application component
+│   ├── main.jsx                # Application entry point
+│   └── index.css               # Global styles
+├── package.json                # Dependencies and scripts
+├── vite.config.js              # Vite configuration
+├── tailwind.config.js          # Tailwind CSS configuration
+├── postcss.config.js           # PostCSS configuration
+├── eslint.config.js            # ESLint configuration
+├── vercel.json                 # Vercel deployment configuration
+└── README.md                   # Project documentation
+```
+
+## 🎯 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-## 🔐 Authentication & Authorization
-
-The application implements role-based access control with the following roles:
-
-### Company Role
-- Full access to all features
-- Company profile management
-- Team member management
-- Proposal creation and management
-- Payment and subscription management
-
-### Editor Role
-- Proposal creation and editing
-- Basic compliance checking
-- Profile management (employee)
-- Access to dashboard and discovery
-
-### Viewer Role
-- Read-only access to proposals
-- Basic compliance checking
-- Profile management (employee)
-- Limited dashboard access
-
-### SuperAdmin Role
-- System administration
-- User management
-- Analytics and reporting
-- System configuration
-
-## 🎨 UI/UX Features
-
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Dark/Light Mode**: Theme switching capability
-- **Accessibility**: WCAG compliant components
-- **Loading States**: Skeleton loaders and spinners
-- **Error Handling**: Comprehensive error boundaries
-- **Toast Notifications**: User feedback system
-
-## 📊 Key Features
-
-### Proposal Management
-- **AI-Powered Generation**: Automated proposal content creation
-- **Template System**: Reusable proposal templates
-- **Version Control**: Track proposal changes and versions
-- **Collaboration**: Multi-user editing capabilities
-
-### Compliance Checking
-- **Basic Compliance**: Automated rule checking
-- **Advanced Compliance**: AI-powered compliance analysis
-- **Custom Rules**: Configurable compliance requirements
-- **Audit Trail**: Complete compliance history
-
-### Dashboard & Analytics
-- **Project Overview**: Visual project management
-- **Calendar Integration**: Schedule and deadline tracking
-- **Performance Metrics**: Proposal success rates
-- **Team Analytics**: User activity and productivity
+- `npm run lint` - Run ESLint for code quality
 
 ## 🔧 Configuration
 
-### Stripe Integration
-Configure Stripe payments in `src/config/stripe.js`:
-```javascript
-import { loadStripe } from '@stripe/stripe-js';
-
-export const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+### Environment Variables
+Create a `.env` file in the root directory with the following variables:
+```env
+VITE_API_BASE_URL=https://proposal-form-backend.vercel.app/api
 ```
 
-### API Configuration
-All API calls are configured through environment variables:
-- `VITE_API_BASE_URL`: Backend API base URL
-- Additional API endpoints are defined in individual components
+### Tailwind CSS
+The project uses Tailwind CSS for styling. Configuration can be found in `tailwind.config.js`.
 
-## 🧪 Testing
+### Vite
+Build tool configuration is in `vite.config.js` with React plugin enabled.
 
-The project includes testing setup with:
-- **React Testing Library**: Component testing
-- **Jest**: Test runner and assertions
-- **User Event**: User interaction testing
+### ESLint
+Code linting rules are configured in `eslint.config.js`.
 
-Run tests with:
-```bash
-npm test
-```
+## 🌐 API Integration
+
+The application integrates with a backend API for:
+- User authentication and authorization
+- RFP and Grant data management
+- Proposal creation and storage
+- AI-powered features
+- Payment processing
+- Support ticket management
+
+**Base URL**: `https://proposal-form-backend.vercel.app/api`
+
+### Key Endpoints
+- `POST /auth/login` - User login
+- `POST /auth/signup` - User registration
+- `POST /auth/forgotPassword` - Password reset
+- `GET /rfp/getAllRFP` - Fetch RFP data
+- `GET /getOtherRFPs` - Get additional RFPs
+- `POST /proposals/createProposal` - Create new proposal
+- `POST /rfp/sendDataForProposalGeneration` - AI proposal generation
+- `POST /saveRFP` - Save RFP for later
+- `POST /uploadRFP` - Upload RFP documents
+- `GET /getDashboardData` - Dashboard data
+- `POST /tickets` - Support ticket management
+
+## 🎨 UI/UX Features
+
+- **Responsive Design**: Mobile-first approach with responsive layouts
+- **Modern Interface**: Clean, professional design with intuitive navigation
+- **Interactive Elements**: Hover effects, transitions, and smooth animations
+- **Role-based Navigation**: Different navigation based on user roles
+- **Loading States**: Proper loading indicators and error boundaries
+- **Toast Notifications**: User-friendly feedback system
+- **Modal Dialogs**: Beautiful confirmation and form dialogs
+
+## 🔐 Authentication & Authorization
+
+The application uses JWT (JSON Web Tokens) for authentication:
+- Secure login/signup process with email verification
+- Token-based session management
+- Protected routes with role-based access control
+- Password reset functionality
+- Profile management for different user types
+
+### User Roles & Permissions
+- **Company**: Full access to all features, team management
+- **Editor**: Create/edit proposals, manage team members
+- **Viewer**: Read-only access to proposals and data
+- **SuperAdmin**: System administration, user management, analytics
+
+## 📊 Key Features
+
+### RFP & Grant Discovery
+- AI-powered search and filtering
+- Save/bookmark functionality
+- Upload custom RFP documents
+- Recommendation engine
+
+### Proposal Management
+- AI-powered proposal generation
+- Template-based creation
+- Real-time collaboration
+- Version control and history
+
+### Compliance & Analytics
+- Automated compliance checking
+- Win probability scoring
+- Performance analytics
+- Dashboard with key metrics
+
+### Team Collaboration
+- Role-based access control
+- Team member management
+- Shared workspaces
+- Activity tracking
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
 1. Connect your GitHub repository to Vercel
-2. Configure environment variables in Vercel dashboard
-3. Deploy automatically on push to main branch
+2. Configure build settings:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+3. Set environment variables in Vercel dashboard
+4. Deploy automatically on push to main branch
 
-### Manual Deployment
-1. Build the project: `npm run build`
-2. Upload the `dist` folder to your hosting provider
-3. Configure server to serve the SPA correctly
+### Other Platforms
+The application can be deployed to any static hosting platform:
+- Netlify
+- AWS S3 + CloudFront
+- Google Cloud Storage
+- GitHub Pages
+
+## 🔒 Security Features
+
+- JWT-based authentication
+- Role-based access control
+- Input sanitization and validation
+- Protected API endpoints
+- Secure payment processing with Stripe
+- Email verification for new accounts
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/new-feature`
-3. Commit changes: `git commit -am 'Add new feature'`
-4. Push to branch: `git push origin feature/new-feature`
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🆘 Support
 
 For support and questions:
+- Use the built-in support ticket system
 - Create an issue in the GitHub repository
 - Contact the development team
-- Check the documentation wiki
 
-## 🔄 Version History
+## 🔮 Roadmap
 
-- **v1.0.0** - Initial release with core RFP management features
-- **v1.1.0** - Added AI-powered proposal generation
-- **v1.2.0** - Enhanced compliance checking system
-- **v1.3.0** - Improved UI/UX and mobile responsiveness
+### Planned Features
+- [ ] Advanced AI proposal generation with GPT integration
+- [ ] Real-time collaboration tools
+- [ ] Advanced analytics dashboard
+- [ ] Mobile application
+- [ ] API rate limiting and caching
+- [ ] Multi-language support
+- [ ] Advanced PDF editing features
+- [ ] Integration with CRM systems
+- [ ] Automated proposal scoring
+- [ ] Team performance metrics
+
+### Performance Improvements
+- [ ] Code splitting and lazy loading
+- [ ] Image optimization
+- [ ] Bundle size reduction
+- [ ] Caching strategies
+- [ ] Progressive Web App (PWA) features
 
 ---
 
-**Built with ❤️ using React and modern web technologies**
+**Built with ❤️ using React, Vite, and modern web technologies**
+
+## 📞 Contact
+
+For any questions or support, please reach out through the application's support system or create an issue in the repository.
